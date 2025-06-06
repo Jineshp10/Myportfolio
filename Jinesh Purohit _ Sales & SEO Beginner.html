@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://127.0.0.1:5500/#contact -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sales Specialist and Digital Marketing Beginner Portfolio - Jinesh Purohit">
+  <meta name="keywords" content="SEO, Digital Marketing, NRI Clients, Sales, HTML Portfolio, CRM">
+  <meta name="author" content="Jinesh Purohit">
+  <title>Jinesh Purohit | Sales &amp; SEO Beginner</title>
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: 
+        linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
+        url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: 
+        linear-gradient(rgba(204, 222, 46, 0.85), rgba(204, 222, 46, 0.85)),
+        url('https://images.unsplash.com/photo-1497493292307-31c376b6e479?auto=format&fit=crop&w=1920&q=60') no-repeat center center;
+      background-size: cover;
+      color: #120707;
+      padding: 2rem;
+      text-align: center;
+      animation: fadeIn 1s ease-out;
+      position: relative;
+      overflow: visible;
+    }
+
+
+    img {
+      animation: fadeInScale 1.5s ease;
+      width: 150px;
+      border-radius: 50%;
+      margin-top: 1rem;
+      animation: floatUpDown 4s ease-in-out infinite;
+      will-change: transform;
+    }
+
+    nav {
+      text-align: center;
+      background-color: #f1f1f1;
+      padding: 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      margin: 0 8px;
+      font-weight: 600;
+      position: relative;
+      display: inline-block;
+      transition: color 0.3s ease, background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #2e86de;
+      color: white !important;
+      transition: all 0.3s ease;
+      padding: 5px 10px;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(46, 134, 222, 0.6);
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      animation: slideUp 1s ease forwards;
+      opacity: 0;
+      transform: translateY(40px);
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
+      animation-delay: 0s;
+    }
+
+    section.show > * {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: childFadeUp 0.6s forwards;
+    }
+    section.show > *:nth-child(1) { animation-delay: 0.15s; }
+    section.show > *:nth-child(2) { animation-delay: 0.3s; }
+    section.show > *:nth-child(3) { animation-delay: 0.45s; }
+    section.show > *:nth-child(4) { animation-delay: 0.6s; }
+    section.show > *:nth-child(5) { animation-delay: 0.75s; }
+    section.show > *:nth-child(6) { animation-delay: 0.9s; }
+
+    h1, h2 {
+      color: #0c0d08cd;
+      animation: slideDown 1s ease;
+      margin-bottom: 1rem;
+    }
+
+    .fancy-title {
+      animation: bounceIn 1.2s ease forwards;
+      display: inline-block;
+    }
+
+    ul {
+      list-style-type: square;
+      padding-left: 1.5rem;
+    }
+
+    footer {
+      text-align: center;
+      background: #decf2e;
+      color: #000;
+      padding: 1rem;
+      animation: fadeIn 1s ease-out;
+      margin-top: 3rem;
+    }
+
+    form label {
+      font-weight: 600;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-family: inherit;
+    }
+
+    form button {
+      background: #2e86de;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    form button:hover {
+      background: #1b4f9c;
+    }
+
+    #angled-gallery {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 1rem 2rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+
+    #angled-gallery h2 {
+      margin-bottom: 1.5rem;
+      color: #2e86de;
+      font-weight: 700;
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    #angled-gallery .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    #angled-gallery .gallery img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 12px;
+      transform: rotate(-6deg);
+      box-shadow: 3px 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    #angled-gallery .gallery img:nth-child(even) {
+      transform: rotate(6deg);
+    }
+
+    #angled-gallery .gallery img:hover {
+      transform: rotate(0deg) scale(1.1);
+      box-shadow: 4px 8px 20px rgba(46,134,222,0.4);
+    }
+    header div[style*="text-align: center"] a {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideUpFade 0.8s forwards;
+      margin: 5px;
+      will-change: transform, opacity;
+    }
+    header div[style*="text-align: center"] a:nth-child(1) { animation-delay: 1.2s; }
+    header div[style*="text-align: center"] a:nth-child(2) { animation-delay: 1.35s; }
+    header div[style*="text-align: center"] a:nth-child(3) { animation-delay: 1.5s; }
+    header div[style*="text-align: center"] a:nth-child(4) { animation-delay: 1.65s; }
+    header div[style*="text-align: center"] a:nth-child(5) { animation-delay: 1.8s; }
+    header div[style*="text-align: center"] a:hover {
+      box-shadow: 0 0 10px 2px rgba(46,134,222,0.7);
+      transition: box-shadow 0.4s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInScale {
+      0% { transform: scale(0.7); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes floatUpDown {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    @keyframes bounceIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-40px) scale(0.9);
+      }
+      60% {
+        opacity: 1;
+        transform: translateY(10px) scale(1.05);
+      }
+      80% {
+        transform: translateY(-5px) scale(0.98);
+      }
+      100% {
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes childFadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideUpFade {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+body {
+  background-color: #fff;
+  color: #222;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #eee;
+}
+
+body.dark-mode header,
+body.dark-mode footer,
+body.dark-mode section {
+  background-color: #1e1e1e;
+  color: #ddd;
+}
+
+
+
+  </style>
+<!-- Code injected by Five-server -->
+  <script async="" data-id="five-server" data-file="c:\JIneshPortfolio\index.html" type="application/javascript" src="./Jinesh Purohit _ Sales &amp; SEO Beginner_files/fiveserver.js.download"></script>
+  <style>      
+      /* Injected by five-server */
+      /*[data-highlight="true"] {
+        border: 1px rgb(90,170,255) solid !important;
+        background-color: rgba(155,215,255,0.5);
+        animation: fadeOutHighlight 1s forwards 0.5s;
+      }
+      img[data-highlight="true"] {
+        filter: sepia(100%) hue-rotate(180deg) saturate(200%);
+        animation: fadeOutHighlightIMG 0.5s forwards 0.5s;
+      }*/
+      @keyframes fadeOutHighlight {
+        from {background-color: rgba(155,215,255,0.5);}
+        to {background-color: rgba(155,215,255,0);}
+      }      
+      @keyframes fadeOutHighlightIMG {
+        0% {filter: sepia(100%) hue-rotate(180deg) saturate(200%);}
+        33% {filter: sepia(66%) hue-rotate(180deg) saturate(100%);}
+        50% {filter: sepia(50%) hue-rotate(90deg) saturate(50%);}
+        66% {filter: sepia(33%) hue-rotate(0deg) saturate(100%);}
+        100% {filter: sepia(0%) hue-rotate(0deg) saturate(100%);}
+      }
+      @keyframes fiveserverInfoPopup {
+        0%   {top:-40px;}
+        15%  {top:4px;}
+        85%  {top:4px;}
+        100% {top:-40px;}
+      }
+      /*smaller*/
+      @media (max-width: 640px) {
+        #fiveserver-info-wrapper {
+          max-width: 98%;
+        }
+        #fiveserver-info {
+          border-radius: 0px;
+        }      
+      }
+
+      </style></head>
+<body class="">
+<header>
+    <button id="darkModeToggle" style="position: fixed; top: 20px; right: 20px; padding: 10px 15px; cursor: pointer;">🌙 Dark Mode</button>
+
+  <img src="./Jinesh Purohit _ Sales &amp; SEO Beginner_files/seo-header-art.png" alt="SEO Header Art" style="width: 100px; margin-top: 10px;">
+  <h1 class="fancy-title">Jinesh Rajpurohit</h1>
+  <img src="./Jinesh Purohit _ Sales &amp; SEO Beginner_files/JPEG.jpeg" alt="Jinesh Rajpurohit">
+  <p><strong>Sales Specialist &amp; Digital Marketing Beginner</strong></p>
+
+  <div style="text-align: center; margin-top: 20px;">
+    <a href="https://www.linkedin.com/in/jinesh-rajpurohit-6220bb213/" target="_blank" style="background:#fff; color:#2e86de; padding: 10px 14px; border-radius:6px; text-decoration:none; margin: 5px; border: 1px solid #2e86de;">
+      <i class="fab fa-linkedin"></i> LinkedIn
+    </a>
+
+    <a href="http://127.0.0.1:5500/Jinesh_Purohit_Professional_Resume.pdf" target="_blank" style="background:#ebecf1; color:#09192a; padding: 10px 14px; border-radius:6px; text-decoration:none; margin: 5px; border: 1px solid #09192a;">
+      <i class="fas fa-file-download"></i> Download Resume
+    </a>
+
+    <a href="https://www.instagram.com/Jineshrajpurohit" target="_blank" style="background:#ebecf1; color: #e1306c; padding: 10px 14px; text-decoration: none; margin: 5px; font-size: 18px;">
+      <i class="fab fa-instagram"></i> Instagram
+    </a>
+
+    <a href="https://twitter.com/Jineshrajpurohit" target="_blank" style="background:#ebecf1; color: #1DA1F2; padding: 10px 14px; text-decoration: none; margin: 5px; font-size: 18px; border-radius:6px; border: 1px solid #1DA1F2;">
+      <i class="fab fa-twitter"></i> Twitter
+    </a>
+
+    <a href="https://github.com/Jineshrajpurohit" target="_blank" style="background:#ebecf1; color: #333; padding: 10px 14px; text-decoration: none; margin: 5px; font-size: 18px; border-radius:6px; border: 1px solid #333;">
+      <i class="fab fa-github"></i> GitHub
+    </a>
+
+    <a href="mailto:jineshrajpurohit143143@gmail.com" style="background:#ebecf1; color: #d44638; padding: 10px 14px; text-decoration: none; margin: 5px; font-size: 18px; border-radius:6px; border: 1px solid #d44638;">
+      <i class="fas fa-envelope"></i> Email
+    </a>
+  </div>
+
+  <p style="margin-top: 1rem;">
+    Thane, Maharashtra, India | 📞 +91 75063 63763 |
+    📧 <a href="mailto:jineshrajpurohit143143@gmail.com">jineshrajpurohit143143@gmail.com</a>
+  </p>
+  <p><em>"Bridging Sales &amp; Digital – Driving Growth from Conversations to Conversions."</em></p>
+</header>
+<nav>
+  <a href="http://127.0.0.1:5500/#about">About</a> |
+  <a href="http://127.0.0.1:5500/#experience">Experience</a> |
+  <a href="http://127.0.0.1:5500/#skills">Skills</a> |
+  <a href="http://127.0.0.1:5500/#education">Education</a> |
+  <a href="http://127.0.0.1:5500/#contact">Contact</a> |
+  <a href="https://www.google.com/search?q=Jinesh+Purohit+SEO+Portfolio" target="_blank" rel="noopener noreferrer">Search Me on Google</a>
+</nav>
+
+<section id="about" class="show">
+  <h2>About Me</h2>
+  <p>I’m a goal-oriented professional with 8+ years of experience in customer service, real estate, luxury automotive, and sales—including NRI client handling across India. Now transitioning into digital marketing, with growing skills in SEO, HTML, and ad tools like Google &amp; Meta Ads. Fast learner, adaptable, and results-focused.</p>
+</section>
+
+<section id="experience" class="show">
+  <h2>Professional Experience</h2>
+
+<h3>Customer Relationship Manager – <a href="https://www.jaguar.in/" target="_blank" rel="noopener noreferrer">Jaguar Land Rover India</a> (March'2023–January'2025)</h3>
+<ul>
+  <li>Managed premium clients and handled toll-free escalations</li>
+  <li>Tracked satisfaction metrics and scheduled services</li>
+</ul>
+
+<h3>Relationship Manager – <a href="https://www.nobroker.in/" target="_blank" rel="noopener noreferrer">NoBroker</a> (2023)</h3>
+<ul>
+  <li>Handled PAN India NRI property consultations and closures</li>
+  <li>Maintained strong follow-ups and CRM engagement</li>
+</ul>
+
+<h3>Sales Manager</h3>
+<p><strong>Showrooms Managed:</strong></p>
+<ul>
+  <li><a href="https://www.instagram.com/kacchalimboo/?hl=en" target="_blank" rel="noopener noreferrer">Kaccha Limboo, Thane (Instagram)</a></li>
+  <li><a href="http://127.0.0.1:5500/[https://www.instagram.com/shoemantar/]" target="_blank" rel="noopener noreferrer">Shoe Mantar Kids Wear Thane (Instagram)</a></li>
+</ul>
+    <ul>
+      <li>Overseeing daily sales operations across three showroom locations.</li>
+      <li>Managing and training sales teams to achieve targets.</li>
+      <li>Handling billing processes and ensuring accurate invoice generation.</li>
+      <li>Managing accounts and maintaining financial records for all showrooms.</li>
+      <li>Building and maintaining strong client relationships.</li>
+      <li>Implementing sales strategies to drive revenue growth.</li>
+    </ul>
+    
+    <p><strong>Duration:</strong> [April 2016] – [November-2020]</p>
+   
+  
+  <h3>Previous Roles</h3>
+  <h4><a href="https://www.relianceretail.com/" target="_blank" rel="noopener noreferrer">Reliance Retail</a> – Customer Support Advisor (2022–2023)</h4>
+
+<h4><a href="https://www.cuemath.com/" target="_blank" rel="noopener noreferrer">Cuemath</a> – Academic Counselor for US/Canada (2020–2021)</h4>
+</section>
+<section id="skills" class="show">
+  <h2>Skills</h2>
+  <ul>
+    <li>SEO (Beginner – On-page &amp; Off-page)</li>
+    <li>Google Keyword Planner, Meta Ads</li>
+    <li>HTML, Basic CSS, WordPress</li>
+    <li>CRM, Sales Funnels, Lead Generation</li>
+    <li>Microsoft Excel (Basic), Multitasking</li>
+  </ul>
+</section>
+<section id="angled-gallery" class="show">
+  <h2>Portfolio Highlights</h2>
+  <div class="gallery">
+    <img src="./Jinesh Purohit _ Sales &amp; SEO Beginner_files/sales-presentation.png" alt="Sales Presentation">
+    <img src="./Jinesh Purohit _ Sales &amp; SEO Beginner_files/digital-marketing-laptop.jpg" alt="Digital Marketing Laptop">
+    <img src="./Jinesh Purohit _ Sales &amp; SEO Beginner_files/seo-analysis.jpg" alt="SEO Analysis">
+    <img src="./Jinesh Purohit _ Sales &amp; SEO Beginner_files/crm-dashboard.jpg" alt="CRM Dashboard">
+    <img src="./Jinesh Purohit _ Sales &amp; SEO Beginner_files/lead-generation.jpg" alt="Lead Generation">
+  </div>
+</section>
+<section id="education" class="show">
+  <h2>Education</h2>
+  <p><strong>Bachelor of Mass Media (Advertising)</strong><br>Mumbai University – 2021 | Grade: B+</p>
+</section>
+
+<section id="contact" class="show">
+  <h2>Contact Me</h2>
+  <form action="http://127.0.0.1:5500/#" method="post" onsubmit="alert(&#39;Thank you for reaching out! I will get back to you soon.&#39;); return false;">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" placeholder="Your name" required=""><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" placeholder="Your email" required=""><br>
+
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="4" placeholder="Your message" required=""></textarea><br>
+
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<footer>
+  <p>Connect with me at <a href="mailto:jineshrajpurohit143143@gmail.com">jineshrajpurohit143143@gmail.com</a> | Updated: 2025</p>
+</footer>
+
+<script>
+  const sections = document.querySelectorAll("section");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  }, {
+    threshold: 0.15
+  });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+</script>
+
+<script src="./Jinesh Purohit _ Sales &amp; SEO Beginner_files/a076d05399.js.download" crossorigin="anonymous"></script>
+<script>
+  const toggleBtn = document.getElementById('darkModeToggle');
+  const body = document.body;
+
+  if (localStorage.getItem('darkMode') === 'enabled') {
+    body.classList.add('dark-mode');
+    toggleBtn.textContent = '☀️ Light Mode';
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    if (body.classList.contains('dark-mode')) {
+      localStorage.setItem('darkMode', 'enabled');
+      toggleBtn.textContent = '☀️ Light Mode';
+    } else {
+      localStorage.setItem('darkMode', 'disabled');
+      toggleBtn.textContent = '🌙 Dark Mode';
+    }
+  });
+</script>
+
+
+
+
+</body></html>
